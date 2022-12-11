@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const Prodcut = new mongoose.Schema(
+const ProdcutSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -32,4 +32,5 @@ const Prodcut = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.models.Product || mongoose.model("Product", Prodcut);
+export default mongoose.models.Product ||
+  mongoose.model("Product", ProdcutSchema);
